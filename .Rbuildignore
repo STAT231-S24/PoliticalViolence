@@ -1,0 +1,7 @@
+^.*.Rproj$
+README.qmd
+^\.Rproj\.user$
+^LICENSE\.md$
+vignettes
+^data-raw$
+^.*\.Rproj$
