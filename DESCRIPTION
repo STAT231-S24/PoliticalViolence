@@ -1,9 +1,9 @@
-Package: foo
-Title: What the Package Does (One Line, Title Case)
-Version: 0.1
+Package: PoliticalViolence
+Title: Analysis of instances of political violence in Asia since 2010
+Version: 0.2
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+    person(given = "Autri", family = "Basu", email = "abasu27@amherst.edu", role = c("aut", "cre"))
+Description: This package uses textual analysis to determine the trends in instances of political violence throughout Asia over time.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -11,3 +11,5 @@ RoxygenNote: 7.3.1
 Depends: 
     R (>= 4.2)
 LazyData: true
+Source: https://acleddata.com/curated-data-files/#regional
+Codebook: https://acleddata.com/acleddatanew/wp-content/uploads/dlm_uploads/2023/06/ACLED_Codebook_2023.pdf
