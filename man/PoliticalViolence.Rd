@@ -3,9 +3,22 @@
 \docType{data}
 \name{PoliticalViolence}
 \alias{PoliticalViolence}
-\title{"PoliticalViolence"}
+\title{PoliticalViolence}
 \format{
 A dataframe with 532,590 rows and 30 columns
+}
+\source{
+\url{https://acleddata.com/curated-data-files/}
+}
+\usage{
+PoliticalViolence
+}
+\description{
+A data set containing information regarding
+532,590 recorded instances of political violence
+across Asia between January 1, 2010 and February 9, 2024.
+}
+\details{
 \describe{
 \item{event_id_cnty}{A unique identifier for each event, based on country code and case number}
 \item{event_date}{The date of the event in YYYY-MM-DD format}
@@ -16,11 +29,11 @@ A dataframe with 532,590 rows and 30 columns
 \item{sub_event_type}{An even more specific categorization for the event (i.e. armed clashes, mob violence, protest with intervention)}
 \item{actor1}{One of the main actors involved in the incident}
 \item{assoc_actor_1}{Actor(s) who worked alongside the group designated as \code{actor1}, separated by semicolons}
-\item{inter1}{A numerical code indicating the type of \code{actor1}, ranging from 1 to 8}
+\item{inter1}{A numerical code indicating the type of \code{actor1}, ranging from 1 to 8. Information on each code can be found on pages 25-29 of the codebook}
 \item{actor2}{The other main actor involved in the incident}
 \item{assoc_actor_2}{Actor(s) who worked alongside the group designated as \code{actor2}, separated by semicolons}
-\item{inter2}{A numerical code indicating the type of \code{actor2}, ranging from 1 to 8}
-\item{interaction}{A concatenation of \code{inter1} and \code{inter2}, indicating the two types of actors interacting in the event}
+\item{inter2}{A numerical code indicating the type of \code{actor2}, ranging from 1 to 8. Information on each code can be found on pages 25-29 of the codebook}
+\item{interaction}{A concatenation of \code{inter1} and \code{inter2}, indicating the two types of actors interacting in the event. Specific descriptions of each interaction can be found on pages 30-34 of the codebook}
 \item{civilian_targeting}{A boolean indicating whether civilians were targeted or not}
 \item{iso}{The ISO code of the country in which the event took place}
 \item{region}{The global region in which the event took place}
@@ -36,18 +49,8 @@ A dataframe with 532,590 rows and 30 columns
 \item{notes}{A brief description of the event}
 \item{fatalities}{The number of fatalities resulting from the event; if there are multiple reports, the lowest estimate is used}
 \item{tags}{Additional information about the event, separated by semicolons}
-\item{crowd_size}{The size of the crowd, parsed from \code{tags}. If \code{tags} contains a range, the lower end of the range is recorded}
+\item{crowd_size}{The size of the crowd, parsed from \code{tags}. If \code{tags} contains a range, the lower end of the range is used}
+The codebook can be found at this link: \url{https://acleddata.com/acleddatanew/wp-content/uploads/dlm_uploads/2023/06/ACLED_Codebook_2023.pdf}
 }
-}
-\source{
-\url{https://acleddata.com/curated-data-files/}
-}
-\usage{
-PoliticalViolence
-}
-\description{
-A data set containing information regarding
-532,590 recorded instances of political violence
-across Asia between January 1, 2010 and February 9, 2024
 }
 \keyword{datasets}
