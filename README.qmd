@@ -12,27 +12,86 @@ editor: source
 #| include: false
 library(tidyverse)
 library(PoliticalViolence)
+library(leaflet)
+library(webshot2)
+library(mapview)
 ```
 
 This file describes the PoliticalViolence package.
-# mention the codebook here
-The package is interesting because XX, YY, and ZZ.
 
-The XX package can be installed by running:
+The package is interesting because it provides insight on an incredibly comprehensive set of instances of political violence across the continent of Asia, including how many deaths they caused, which types of actors (i.e. rioters or government forces) were involved, and what type of disorder occurred. It can be used for many analyses, such as when and why political violence spikes, which regions it is most common in, and which kinds of groups are most frequently involved in these incidents.
 
+The PoliticalViolence package can be installed by running:
 ```
-devtools::install_github("nicholasjhorton/DiscGolf")
-library(DiscGolf)
+devtools::install_github("STAT231-S24/PoliticalViolence")
 ```
-
 ```{r}
+library(PoliticalViolence)
 glimpse(PoliticalViolence)
 ```
 
-Here are some sample analyses:
+# Sample analyses
 
-XX
+## Map of incidents in West Bengal, India in July 2023 involving civilian targeting
+This is an homage to the reason why I chose this dataset; it made me think back to an issue of a Kolkata newspaper I saw when I was there last summer. The front page featured a picture of some people fighting one another at a polling station.
+```{r}
+#| fig.cap: "A map of instances of political violence in West Bengal, India in July 2023 involving civilian targeting"
+#| label: fig-map-targeting
+#| message: false
+#| warning: false
+civilian_targeting_WB <- PoliticalViolence |>
+  filter(
+    civilian_targeting == TRUE,
+    year(event_date) == 2023, 
+    month(event_date) == 07, 
+    admin1 == "West Bengal") |>
+  select(event_id_cnty,event_type,location,latitude,longitude,fatalities)
 
-YY
+map1 <- leaflet() |>
+  addTiles() |>
+  addMarkers(
+    data = civilian_targeting_WB,
+    popup = ~paste0("<b>",event_type,"</b></br>",location,"</br>",fatalities," death(s)")
+  )
+map1 |>
+  mapshot2(file = "Bengal.png")
+knitr::include_graphics("Bengal.png")
+```
 
-ZZ
+## Countries by number of deaths from political violence in 2023, excluding those with zero deaths
+```{r}
+#| tbl-cap: "Asian nations ordered by the number of fatalities from political violence in 2023"
+#| label: tbl-fatalities
+#| message: false
+#| warning: false
+PoliticalViolence |>
+  select(event_id_cnty,year,country,fatalities) |>
+  filter(fatalities != 0, year == 2023) |>
+  group_by(country) |>
+  summarize(total_deaths = sum(fatalities)) |>
+  arrange(desc(total_deaths)) |>
+  rename("Country" = "country", "Deaths in 2023" = "total_deaths") |>
+  knitr::kable()
+```
+## Number of incidents of political violence in Myanmar over time
+```{r}
+#| fig.cap: "The number of instances of political violence in Myanmar each month from 2010-present"
+#| label: fig-graph-incidents
+#| message: false
+#| warning: false
+PoliticalViolence |>
+  filter(country == "Myanmar") |>
+  # this wrangling is essentially grouping the dates by month by saying that every 
+  # incident in month n occurred on the first day of that month, allowing for a 
+  # more legible display than one that goes day-by-day
+  mutate(
+    Date = ymd(
+      10000*year+100*month(event_date)+1
+    )) |>
+  group_by(Date) |>
+  summarize(`Number of incidents` = n()) |>
+  ggplot(aes(x = Date, y = `Number of incidents`)) +
+  geom_text(x = ymd(20221101),y=50,label = "February 2021 Coup", color = "red") + 
+  geom_line() + 
+  geom_vline(xintercept = ymd(20210201), color = "red", linetype = "longdash") 
+```
