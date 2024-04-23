@@ -1,6 +1,7 @@
 Package: PoliticalViolence
 Title: Analysis of instances of political violence in Asia since 2010
-Version: 1.0
+Version: 1.2
+Date: 2024-04-23
 Authors@R: 
     person(given = "Autri", family = "Basu", email = "abasu27@amherst.edu", role = c("aut", "cre"))
 Description: This package uses textual analysis to determine the trends in instances of political violence throughout Asia over time.

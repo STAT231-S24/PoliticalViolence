@@ -1,11 +1,11 @@
 #' PoliticalViolence
 #'
 #' A data set containing information regarding
-#' 532,590 recorded instances of political violence
-#' across Asia between January 1, 2010 and February 9, 2024.
+#' 546,859 recorded instances of political violence
+#' across Asia between January 1, 2010 and April 12, 2024.
 #'
 #' @source \url{https://acleddata.com/curated-data-files/}
-#' @format A dataframe with 532,590 rows and 30 columns
+#' @format A dataframe with 546,859 rows and 30 columns
 #' @details 
 #' \describe{
 #'   \item{event_id_cnty}{A unique identifier for each event, based on country code and case number}
