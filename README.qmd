@@ -27,6 +27,7 @@ devtools::install_github("STAT231-S24/PoliticalViolence")
 ```
 ```{r}
 library(PoliticalViolence)
+packageVersion(PoliticalViolence)
 glimpse(PoliticalViolence)
 ```
 

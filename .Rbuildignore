@@ -1,4 +1,6 @@
 ^.*.Rproj$
+Bengal.png
+README_files
 README.qmd
 ^\.Rproj\.user$
 ^LICENSE\.md$
