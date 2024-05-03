@@ -1,7 +1,7 @@
 library(tidyverse)
 # This data was originally downloaded from https://acleddata.com/data-export-tool/.
 # on May 3, 2024 at 5:36 PM. I have compressed it here in order to be able to upload it to GitHub.
-write_csv(read_csv("data-raw/Asia-Pacific_2018-2024_Apr26.csv"), "data-raw/asia_data.csv.gz")
+#write_csv(read_csv("data-raw/Asia-Pacific_2018-2024_Apr26.csv"), "data-raw/asia_data.csv.gz")
 # These two CSV files were manually created by taking information directly out of the 2023 ACLED codebook
 # at https://acleddata.com/acleddatanew/wp-content/uploads/dlm_uploads/2023/06/ACLED_Codebook_2023.pdf
 actor_codes <- read_csv("data-raw/acled_codebook_actor_codes.csv") |>
