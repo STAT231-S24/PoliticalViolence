@@ -1,10 +1,10 @@
 Package: PoliticalViolence
 Title: Analysis of instances of political violence in Asia since 2010
-Version: 1.2
-Date: 2024-04-23
+Version: 1.3
+Date: 2024-05-03
 Authors@R: 
     person(given = "Autri", family = "Basu", email = "abasu27@amherst.edu", role = c("aut", "cre"))
-Description: This package uses textual analysis to determine the trends in instances of political violence throughout Asia over time.
+Description: This package aims to determine the trends in instances of political violence throughout Asia over time.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

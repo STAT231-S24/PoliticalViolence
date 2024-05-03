@@ -1,11 +1,11 @@
 #' PoliticalViolence
 #'
 #' A data set containing information regarding
-#' 546,859 recorded instances of political violence
-#' across Asia between January 1, 2010 and April 12, 2024.
+#' 549,466 recorded instances of political violence
+#' across Asia between January 1, 2010 and April 26, 2024.
 #'
 #' @source \url{https://acleddata.com/curated-data-files/}
-#' @format A dataframe with 546,859 rows and 30 columns
+#' @format A dataframe with 549,466 rows and 30 columns
 #' @details 
 #' \describe{
 #'   \item{event_id_cnty}{A unique identifier for each event, based on country code and case number}
@@ -17,11 +17,11 @@
 #'   \item{sub_event_type}{An even more specific categorization for the event (i.e. armed clashes, mob violence, protest with intervention)}
 #'   \item{actor1}{One of the main actors involved in the incident}
 #'   \item{assoc_actor_1}{Actor(s) who worked alongside the group designated as `actor1`, separated by semicolons}
-#'   \item{inter1}{A numerical code indicating the type of `actor1`, ranging from 1 to 8. Information on each code can be found on pages 25-29 of the codebook}
+#'   \item{actor_1_desc}{A categorization of `actor1`}
 #'   \item{actor2}{The other main actor involved in the incident}
 #'   \item{assoc_actor_2}{Actor(s) who worked alongside the group designated as `actor2`, separated by semicolons}
-#'   \item{inter2}{A numerical code indicating the type of `actor2`, ranging from 1 to 8. Information on each code can be found on pages 25-29 of the codebook}
-#'   \item{interaction}{A concatenation of `inter1` and `inter2`, indicating the two types of actors interacting in the event. Specific descriptions of each interaction can be found on pages 30-34 of the codebook}
+#'   \item{actor_2_desc}{A categorization of `actor2`}
+#'   \item{interaction_type}{A categorization of the incident based on `actor_1_desc` and `actor_2_desc`}
 #'   \item{civilian_targeting}{A boolean indicating whether civilians were targeted or not}
 #'   \item{iso}{The ISO code of the country in which the event took place}
 #'   \item{region}{The global region in which the event took place}

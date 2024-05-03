@@ -1,0 +1,45 @@
+‘Interaction’ code,Description,Examples
+10,Sole state forces action,Base establishment by state forces; remote violence involving state military with no reported casualties; non-violent military operations
+11,State forces versus state forces,Military infighting; battles between a military and mutinous forces; arrests of military officials
+12,State forces versus rebels,Civil war violence between state forces and a rebel actor
+13,State forces versus political militia,Violence between state forces and unidentified armed groups; violence between police and political party militias
+14,State forces versus identity militia,Military engagement with a communal militia
+15,State forces versus rioters,Suppression of a violent demonstration by police or military
+16,State forces versus protesters,Suppression of a peaceful demonstration by police or military
+17,State forces versus civilians,State repression of civilians; arrests by police
+18,State forces versus external/other forces ,Inter-state conflict; state engagement with private security forces or a UN operation; strategic developments between a regime and the UN or another external actor
+20,Sole rebel action,Base establishment; remote violence involving rebel groups with no reported target;accidental detonation by a rebel group
+22,Rebels versus rebels ,Rebel infighting; violence between rebel groups and their splinter movements
+23,Rebels versus political militia ,Civil war violence between rebels and a pro-government militia; violence between rebels and unidentified armed groups
+24,Rebels versus identity militia,Violence between rebels and local security providers
+25,Rebels versus rioters,Spontaneous violence against a rebel group; a violent demonstration engaging a rebel group
+26,Rebels versus protesters,Violence against protesters by rebels
+27,Rebels versus civilians,Rebel targeting of civilians (a strategy commonly used in civil war)
+28,Rebels versus others,Civil war violence between rebels and an allied state military; rebel violence against a UN operation
+30,Sole political militia action,Remote violence by an unidentified armed group with no reported target; accidental detonation by a political militia
+33,Political militia versus political militia,Inter-elite violence
+34,Political militia versus identity militia,Violence between communal militia and an unidentified armed group; violence between political militia and local security providers
+35,Political militia versus rioters,Violent demonstration against a political militia; spontaneous violence against a political militia
+36,Political militia versus protesters,Suppression of a peaceful demonstration by a political militia
+37,Political militia versus civilians,Out-sourced state repression carried out by pro-government militias; civilian targeting by political militias or unidentified armed groups
+38,Political militia versus others,Violence between private security forces and unidentified armed groups; violence between pro-government militia and external state military forces
+40,Sole identity militia action,Destruction of property by a communal militia; establishment of a local security militia
+44,Dentity militia versus identity militia,Inter- communal violence
+45,Identity militia versus rioters,Violent demonstration against an identity militia; spontaneous violence against an identity militia
+46,Identity militia versus protesters,Suppression of a peaceful demonstration by an identity militia
+47,Identity militia versus civilians,"Civilian targeting, especially in the context of inter-communal violence"
+48,Identity militia versus other,External state military engaging in violence against a communal militia
+50,Sole rioter action,One-sided violent demonstration; spontaneous arson
+55,Rioters versus rioters,Two-sided violent demonstration in which both sides engage in violence
+56,Rioters versus protesters,Two-sided demonstration in which only one side engages in violence
+57,Rioters versus civilians,Violent demonstration in which civilians are injured/killed; spontaneous violence in which civilians are targeted by a mob
+58,Rioters versus others,Mob violence against regional or international operation
+60,Sole protester action ,One-sided peaceful protest
+66,Protesters versus protesters,Two-sided peaceful protest
+67,Protesters versus civilians,Peaceful protesters engaging civilians
+68,Protesters versus other,Suppression of a peaceful demonstration by private security forces
+70,Sole civilian action,One-sided strategic development
+77,Civilians versus civilians,Peaceful interactions between civilians recorded as ‘Strategic developments’
+78,Other actor versus civilians ,Regional or international operation targeting civilians; private security forces targeting civilians
+80,Sole other action,Strategic developments involving international or regional operations; remote violence by external military forces with no reported target; non-violent external military operations
+88,Other versus other ,"Clashes between foreign state forces, international missions, or private security forces"

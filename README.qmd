@@ -1,7 +1,7 @@
 ---
 title: "PoliticalViolence"
 author: "Autri Basu"
-date: "2024-04-23"
+date: "2024-05-03"
 date-format: iso
 format: gfm
 editor: source
